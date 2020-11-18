@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <meta name="keywords" content="visa, master, amex, germany, berlin, munich, apple pay ">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/style.css">
+        <title>mit Karte</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <div class = 'navbar'>
+            <div class='container flex'>
+                <h1 class='logo'><span>mit</span> Karte</h1>
+                <nav>
+                    <ul>
+                        <li><a href='/index.html'>Home</a></li>
+                        <li><a href='/location.html'>Location</a></li>
+                        <li><a href='/aboutus.html'>About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> 
+       
+        <!-- Shocase -->
+
+        <section class ='showcase'>
+            <div class='container grid'>
+                <div class = 'showcase-text'>
+                    <h1> Non-cash payment stores in Belrin</h1>
+                    <h3>Let's share our neighbor's small shops, where non-cash payments are accepted</h3>
+                    <a href="/location.html" class= 'btn btn-outline'>Let's share a store</a>
+                </div>
+
+                <div class='showcase-form card'>
+                    <h2> Subscribe To Our News</h2>
+                    <form id='contactForm'name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden">
+                            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        <div class= 'form-control'>
+                            <input type='text' placeholder="Name" name='name' id='name' required>
+                        </div>
+                        <div class= 'form-control'>
+                            <input type='email' placeholder="Email" name='email' id='email' required>
+                        </div>
+                        
+                        <input type='submit' value='Send' class = 'btn btn-primary'> 
+                    </form>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Reason -->
+        <section class="reason">
+            <div class="container">
+                <h3 class="reason-heading text-center my-1 lg">
+                    Why we need this?   
+                </h3>
+    
+                <div class="grid grid-3 text-center my-4">
+                    <div>
+                        <i class="far fa-credit-card fa-3x"></i>
+                        <h3>convenient</h3>
+                        <p class="text-secondary">No worry to carry cash all ways</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-balance-scale fa-3x"></i>
+                        <h3>our choice</h3>
+                        <p class="text-secondary">We have a choice to choose our purchasing payment</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-running fa-3x"></i>
+                        <h3>save energy</h3>
+                        <p class="text-secondary">No need to look for ATM</p>
+                    </div>
+                    <div>
+                        <i class="far fa-handshake fa-3x"></i>
+                        <h3>support small shops</h3>
+                        <p class="text-secondary">We can help to our small shops when we don't have enough cash on us</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-hourglass-half fa-3x"></i>
+                        <h3>save time</h3>
+                        <p class="text-secondary">No need to look for ATM or stores accept cards</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-hand-holding-usd fa-3x"></i>
+                        <h3>save money</h3>
+                        <p class="text-secondary">No need pay extra fee to withraw cash </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ads -->
+        <section class="ads bg-primary my-2 py-2">
+            <div class="container grid">
+                <div class="text-center">
+                    <h2 class="lg">we need your paticipation</h2>
+                    <p class="lead my-1">It is hard to find which stores accept non-cash payment in Berlin.</p>
+                    <p class="lead my-1">Please share your neighbor's shops where accept non-cash payment</p>
+
+                </div>
+                <img src="img/showcase.jpg" alt="">
+            </div>
+        </section>
+
+        <!-- Map -->
+        <section class="map my-2">
+            <div class="container grid">
+                <div>
+                    <img src="img/map.png" alt="">
+                </div>
+                <div class="card">
+                    <h2> Share a store</h2>
+                    <form class = 'map-form'>
+                        <div class= 'form-control'>
+                            <input type='text' placeholder="Store Name" name='store' required>
+                        </div>
+                        <div class= 'form-control'>
+                            <input type='text' placeholder="Street" name='street' required>
+                        </div>
+                        <div class= 'form-control'>
+                            <input type='number' placeholder="Store number" name='number' min= '1' max = '999' required>
+                        </div>
+                        <div class= 'form-control'>   
+                            <input type='text' placeholder="City" name='city' value = Berlin required>
+                        </div>
+                        <div class= 'form-control'>   
+                            <input type='number' placeholder="Zip code" name='zipcode' min = '10115' max = '14199' required>
+  
+                        </div>
+                        <div class= 'form-control'>
+                           
+                            <select id="category" name="stores" >
+                                <option value="noidea">Store category</option>
+                                <option value="bakery">Bakery</option>
+                                <option value="food">Food</option>
+                                <option value="spati">Späti</option>
+                                <option value="hairshop">Hairshop</option>
+                                <option value="cafe">Cafe</option>
+                                <option value="pharmacy">Pharmacy</option>
+                                <option value="grocery">Grocery</option>
+                                
+                            </select>
+                        <h2> Payments</h2>
+                        <div class='form-control'>
+                            <i class="fab fa-cc-visa fa-3x"></i>      
+                            <i class="fab fa-cc-mastercard fa-3x"></i>
+                            <i class="fab fa-cc-amex fa-3x"></i>
+                            <i class="fab fa-cc-paypal fa-3x"></i>
+                            <i class="fab fa-google-pay fa-3x"></i>
+                            <i class="fab fa-apple-pay fa-3x"></i>
+
+
+                        </div>
+                        <input type="submit" value="Post" class="btn btn-primary">
+                    </form>
+
+                </div>
+               
+            </div>
+        </section>
+        <!-- Footer -->
+    <footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>mit Karte
+                </h1>
+                <p>Copyright &copy; 2020</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+       
+</html>

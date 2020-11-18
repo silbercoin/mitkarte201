@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <meta name="keywords" content="visa, master, amex, germany, berlin, munich, apple pay ">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/style.css">
+        <title>mit Karte</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <div class = 'navbar'>
+            <div class='container flex'>
+                <h1 class='logo'><span>mit</span> Karte</h1>
+                <nav>
+                    <ul>
+                        <li><a href='/index.html'>Home</a></li>
+                        <li><a href='/location.html'>Location</a></li>
+                        <li><a href='/aboutus.html'>About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> 
+       
+        <!-- Head -->
+      <section class="location-head bg-primary py-3">
+        <div class="container grid">
+            <div>
+                <h1 class="lg">Location</h1>
+                <p class="lead">
+                    Check out where you can find stores that accept non-cash payment and if you found a store let's share with us in Berlin.
+                </p>
+            </div>
+            <img class = 'location-img' src="img/berlin5.png" alt="">
+        </div>
+      </section>
+
+      <!-- Map -->
+      <section class="map my-2">
+        <div class="container grid">
+            <div>
+                <img src="img/map.png" alt="">
+            </div>
+            <div class="card">
+                <h2> Share a store</h2>
+                <form class = 'map-form'>
+                    <div class= 'form-control'>
+                        <input type='text' placeholder="Store Name" name='store' required>
+                    </div>
+                    <div class= 'form-control'>
+                        <input type='text' placeholder="Street" name='street' required>
+                    </div>
+                    <div class= 'form-control'>
+                        <input type='number' placeholder="Store number" name='number' min= '1' max = '999' required>
+                    </div>
+                    <div class= 'form-control'>   
+                        <input type='text' placeholder="City" name='city' value = Berlin required>
+                    </div>
+                    <div class= 'form-control'>   
+                        <input type='number' placeholder="Zip code" name='zipcode' min = '10115' max = '14199' required>
+
+                    </div>
+                    <div class= 'form-control'>
+                       
+                        <select id="category" name="stores" >
+                            <option value="noidea">Store category</option>
+                            <option value="bakery">Bakery</option>
+                            <option value="food">Food</option>
+                            <option value="spati">Späti</option>
+                            <option value="hairshop">Hairshop</option>
+                            <option value="cafe">Cafe</option>
+                            <option value="pharmacy">Pharmacy</option>
+                            <option value="grocery">Grocery</option>
+                            
+                        </select>
+                    <h2> Payments</h2>
+                    <div class='form-control'>
+                        <i class="fab fa-cc-visa fa-3x"></i>      
+                        <i class="fab fa-cc-mastercard fa-3x"></i>
+                        <i class="fab fa-cc-amex fa-3x"></i>
+                        <i class="fab fa-cc-paypal fa-3x"></i>
+                        <i class="fab fa-google-pay fa-3x"></i>
+                        <i class="fab fa-apple-pay fa-3x"></i>
+
+
+                    </div>
+                    <input type="submit" value="Post" class="btn btn-primary">
+                </form>
+            </div>
+            
+
+        </div>
+    </section>
+        
+        <!-- Footer -->
+    <footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>mit Karte
+                </h1>
+                <p>Copyright &copy; 2020</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+       
+</html>
