@@ -7,6 +7,8 @@
         <meta name="keywords" content="visa, master, amex, germany, berlin, munich, apple pay ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
         <link rel="stylesheet" href="/style.css">
         <title>mit Karte</title>
     </head>
@@ -42,7 +44,37 @@
       <section class="map my-2">
         <div class="container grid">
             <div>
-                <img src="img/map.png" alt="">
+                <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+                <link
+                rel="stylesheet"
+                href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+                type="text/css"
+                />
+                <div class= 'card' id='map' style='height: 35rem;'></div>
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1Ijoid2FuamVuZyIsImEiOiJja2hvb3l6cWkwMnNpMnJvc2N6NWs2YWI4In0.Ewn7BFHWvgdNLQ-kcuRkQQ';
+                    var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+                    center: [13.38333, 52.51667], // starting position [lng, lat]
+                    zoom: 11 // starting zoom
+                    });
+                    map.addControl(
+                    new MapboxGeocoder({
+                    accessToken: mapboxgl.accessToken,
+                    mapboxgl: mapboxgl
+                    })
+                    );
+                    
+                    map.addControl(
+                    new mapboxgl.GeolocateControl({
+                    positionOptions: {
+                    enableHighAccuracy: true
+                    },
+                    trackUserLocation: true
+                    })
+                    );
+                    </script>
             </div>
             <div class="card">
                 <h2> Share a store</h2>
