@@ -89,7 +89,7 @@ img {
 }
 
 .btn:hover {
-  transform: scale(0.98);
+  transform: scale(0.80);
 }
 /* Backgrounds & colored buttons */
 .bg-primary,
@@ -114,6 +114,9 @@ img {
 .btn-light {
   background-color: #f4f4f4;
   color: #333;
+}
+.btn-icon {
+  color:#047aed
 }
 
 .bg-primary a,
@@ -387,6 +390,17 @@ img {
 .map-form input:focus {
   outline: none;
 }
+.map-form .grid {
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+.map-form .grid > *:first-child {
+  
+  grid-column: 1 ;
+}
+.map-form button{
+  padding:10px 15px;
+}
 
 /* Location */
 .location-head img,
@@ -492,6 +506,14 @@ img {
     justify-self: center;
     margin: auto;
     animation: slideInFromBottom 1s ease-in;
+  }
+  .map-form .grid {
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+  .map-form .grid > *:first-child {
+    
+    grid-column: 1 ;
   }
 
   .ads .grid > *:first-child {

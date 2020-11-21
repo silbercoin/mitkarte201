@@ -109,13 +109,13 @@
                             
                         </select>
                     <h2> Payments</h2>
-                    <div class='form-control'>
-                        <i class="fab fa-cc-visa fa-3x"></i>      
-                        <i class="fab fa-cc-mastercard fa-3x"></i>
-                        <i class="fab fa-cc-amex fa-3x"></i>
-                        <i class="fab fa-cc-paypal fa-3x"></i>
-                        <i class="fab fa-google-pay fa-3x"></i>
-                        <i class="fab fa-apple-pay fa-3x"></i>
+                    <div class='form-control grid'>
+                        <button type="button" class="btn btn-light" name="visa" > <i class="fab fa-cc-visa fa-3x" onclick="setColor(event)";></i></button>
+                        <button type="button" class="btn btn-light" name="mastercard" ><i class="fab fa-cc-mastercard fa-3x" onclick="setColor(event)"></i></button>
+                        <button type="button" class="btn btn-light" name="amex" ><i class="fab fa-cc-amex fa-3x" onclick="setColor(event)"></i></button>
+                        <button type="button" class="btn btn-light" name="paypal" ><i class="fab fa-cc-paypal fa-3x " onclick="setColor(event)"></i></button>
+                        <button type="button" class="btn btn-light" name="googlepay" ><i class="fab fa-google-pay fa-3x " onclick="setColor(event)"></i></button>
+                        <button type="button" class="btn btn-light" name="applepay"  ><i class="fab fa-apple-pay fa-3x " onclick="setColor(event)";></i></button>
 
 
                     </div>
@@ -126,7 +126,7 @@
 
         </div>
     </section>
-        
+    <script src='main.js'></script>
         <!-- Footer -->
     <footer class="footer bg-dark py-5">
         <div class="container grid grid-3">
